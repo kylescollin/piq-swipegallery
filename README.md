@@ -2,7 +2,7 @@
 Title: PlaceIQ Swipe Gallery
 File: piq-swipegallery
 Author: Kyle Scollin
-Date: October 4, 2013
+Date: September 8, 2014
 ----------------------------
 
 

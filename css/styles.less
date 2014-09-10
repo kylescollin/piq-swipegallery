@@ -1,8 +1,8 @@
 /* Set these custom variables */
 @mainBackground: url('../img/bg.png');
-@swiperHeight: 250px;
-@swiperTopPos: 100px;
-@swiperSpacing: 10px;
+@swiperHeight: 500px;
+@swiperTopPos: 200px;
+@swiperSpacing: 20px;
 
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -75,15 +75,18 @@ body{
 	background-color: #000000;
 }
 #container {
-	width: 320px;
-	height: 480px;
+	width: 640px;
+	height: 1136px;
 	background: @mainBackground;
 	margin: 0 auto;
+	position: relative;
 }
 .button {
-	position: relative;
-	top: 140px;
-	left: 85px;
+	position: absolute;
+	top: 800px;
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
 	-webkit-filter: drop-shadow(3px 3px 8px rgba(0,0,0,0.3));
 }
 
@@ -92,7 +95,7 @@ Swiper Styles
 ================================================================*/
 .swiper-container {
 	margin:0 auto;
-	position:relative;
+	position:absolute;
 	overflow:hidden;
 	-webkit-backface-visibility:hidden;
 	-moz-backface-visibility:hidden;
@@ -157,7 +160,7 @@ sizes, pagination, etc.
 ================================================================*/
 .swiper-container {
 	/* Specify Swiper's Size: */
-	width: 320px;
+	width: 640px;
 	height: @swiperHeight;
 	top: @swiperTopPos;
 }
@@ -177,15 +180,28 @@ sizes, pagination, etc.
 /* ===============================================================
 Pagination Styles
 ================================================================*/
+.pagination {
+	position: absolute;
+	top: 740px;
+	width: 100%;
+	text-align: center;
+}
 .swiper-pagination-switch {
-	/* Stylize pagination button: */	
-
+	/* Stylize pagination button: */
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border-radius: 16px;
+	background: #fff;
+	margin-right: 8px;
+	opacity: 0.8;
+	cursor: pointer;	
 }
 .swiper-active-switch {
 	/* Specific active button style: */	
-	
+	background: #aaa;
 }
 .swiper-visible-switch {
 	/* Specific visible button style: */	
-	
+	background: #f4324e;
 }
