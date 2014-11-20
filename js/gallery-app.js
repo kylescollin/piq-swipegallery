@@ -1,4 +1,5 @@
 $(function(){
+	ga('send', 'event', 'in-page events', 'swiper', 'slide 0 viewed');
 	var swiped = false;
 	var gallery = $('.swiper-container').swiper({
 		slidesPerView:'auto',
@@ -14,13 +15,13 @@ $(function(){
     			swiped = true;
     		}
 			ga('send', 'event', 'in-page events', 'swiper', 'slide change');
-			console.log('swipe');
+			ga('send', 'event', 'in-page events', 'swiper', 'slide ' + gallery.activeIndex + ' viewed');
+			console.log('swipe - slide: ' + gallery.activeIndex );
 		}
 	})
 
 	//Smart resize
 	$(window).resize(function(){
-		changeSize()
 		gallery.resizeFix(true)	
 	})
 })
